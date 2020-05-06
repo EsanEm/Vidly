@@ -175,8 +175,21 @@
     <Compile Include="Migrations\202005061557307_AddBirthDateToCustomer.designer.cs">
       <DependentUpon>202005061557307_AddBirthDateToCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005061608481_AddMovieTable.cs" />
+    <Compile Include="Migrations\202005061608481_AddMovieTable.designer.cs">
+      <DependentUpon>202005061608481_AddMovieTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005061611517_AddGenreTableAndAddToMovies.cs" />
+    <Compile Include="Migrations\202005061611517_AddGenreTableAndAddToMovies.designer.cs">
+      <DependentUpon>202005061611517_AddGenreTableAndAddToMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005061612565_PopulateGenreTable.cs" />
+    <Compile Include="Migrations\202005061612565_PopulateGenreTable.designer.cs">
+      <DependentUpon>202005061612565_PopulateGenreTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
@@ -229,7 +242,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Movie\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -271,6 +283,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005061557307_AddBirthDateToCustomer.resx">
       <DependentUpon>202005061557307_AddBirthDateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005061608481_AddMovieTable.resx">
+      <DependentUpon>202005061608481_AddMovieTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005061611517_AddGenreTableAndAddToMovies.resx">
+      <DependentUpon>202005061611517_AddGenreTableAndAddToMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005061612565_PopulateGenreTable.resx">
+      <DependentUpon>202005061612565_PopulateGenreTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
