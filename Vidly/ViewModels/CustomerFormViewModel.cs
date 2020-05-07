@@ -15,6 +15,18 @@ namespace Vidly.ViewModels
 
         public Customer Customer { get; set; }
 
-        
+        // To change view's title based on new or existing customer
+        public string Title
+        {
+            get
+            {
+                if (Customer != null && Customer.Id != 0)
+                    return "Edit Customer";
+
+                return "New Customer";
+            }
+        }
+
+
     }
 }
