@@ -10,7 +10,6 @@ namespace Vidly.App_Start
 {
     public class MappingProfile : Profile
     {
-
         public MappingProfile()
         {
             Mapper.CreateMap<Customer, CustomerDto>();
@@ -19,12 +18,8 @@ namespace Vidly.App_Start
             Mapper.CreateMap<Genre, GenreDto>();
 
 
-
-
             Mapper.CreateMap<Movie, MovieDto>();
             Mapper.CreateMap<MovieDto, Movie>();
         }
-
-
     }
 }

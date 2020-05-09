@@ -14,7 +14,6 @@ namespace Vidly.Controllers.Api
 {
     public class CustomersController : ApiController
     {
-
         private ApplicationDbContext _context;
 
         public CustomersController()
@@ -23,18 +22,16 @@ namespace Vidly.Controllers.Api
         }
 
 
-
         // GET  /api/customers
 
         public IHttpActionResult GetCustomers()
         {
-            var customerDtos =  _context.Customers
+            var customerDtos = _context.Customers
                 .Include(c => c.MembershipType)
                 .ToList()
                 .Select(Mapper.Map<Customer, CustomerDto>);
 
             return Ok(customerDtos);
-
         }
 
 
@@ -48,11 +45,8 @@ namespace Vidly.Controllers.Api
             if (customer == null)
                 return NotFound();
 
-            return Ok (Mapper.Map<Customer, CustomerDto>(customer));
-            
+            return Ok(Mapper.Map<Customer, CustomerDto>(customer));
         }
-
-
 
 
         // POST /api/customers
@@ -70,9 +64,7 @@ namespace Vidly.Controllers.Api
             customerDto.Id = customer.Id;
 
             return Created(new Uri(Request.RequestUri + "/" + customer.Id), customerDto);
-
         }
-
 
 
         // PUT  /api/customers/1
@@ -92,8 +84,6 @@ namespace Vidly.Controllers.Api
 
 
             _context.SaveChanges();
-
-
         }
 
 
@@ -109,12 +99,6 @@ namespace Vidly.Controllers.Api
 
             _context.Customers.Remove(customerInDb);
             _context.SaveChanges();
-
-
         }
-
-
-
-
     }
 }

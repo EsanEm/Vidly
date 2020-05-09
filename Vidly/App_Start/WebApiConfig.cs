@@ -12,7 +12,6 @@ namespace Vidly
     {
         public static void Register(HttpConfiguration config)
         {
-
             var settings = config.Formatters.JsonFormatter.SerializerSettings;
             settings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             settings.Formatting = Formatting.Indented;
@@ -22,7 +21,7 @@ namespace Vidly
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                defaults: new {id = RouteParameter.Optional}
             );
         }
     }
