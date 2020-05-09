@@ -42,7 +42,11 @@ else
 @section scripts
 {
     <script>
-        $(document).ready(function() {
+        $(document).ready(function ()
+          { 
+        $("#movies").dataTable();
+           
+          
             $("#movies").on("click", ".js-delete" ,
                 function() {
                     var button = $(this);
